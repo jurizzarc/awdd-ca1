@@ -32,7 +32,8 @@
 
             <!-- Hamburger Menu -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                <i class="material-icons">menu</i>
+                <i class="material-icons" id="menu-icon">menu</i>
+                <i class="material-icons" id="close-icon">close</i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -314,10 +315,24 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-        document.querySelector(".animated-menu-icon").addEventListener("click", function() {
-            this.classList.toggle("active");
+        $(document).ready(function() {
+            //hide close icon
+            $('#close-icon').hide();
+            //when menu icon is clicked
+            $('#menu-icon').click(function() {
+                //hide menu icon
+                $('#menu-icon').hide();
+                //show close icon
+                $('#close-icon').show();
+            });
+            //when close icon is clicked
+            $('#close-icon').click(function() {
+                //hide close icon
+                $('#close-icon').hide();
+                //show menu icon
+                $('#menu-icon').show();
+            });
         });
-
     </script>
 
 </body>
