@@ -14,6 +14,9 @@
 
     <!-- My CSS -->
     <link rel="stylesheet" href="css/mystyle.css" type="text/css">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
     <title>Roma - Vermilion Cinema</title>
 </head>
@@ -31,7 +34,7 @@
                 <img src="images/navbar_logo.png">
             </a>
 
-            <!-- Hamburger Menu -->
+            <!-- Menu Icon -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                 <i class="material-icons" id="menu-icon">menu</i>
                 <i class="material-icons" id="close-icon">close</i>
@@ -133,20 +136,20 @@
 
         </div>
 
-        <div class="row movie-first-row">
+        <div class="row movie-full-info">
             <!-- Opening Movie Description Row -->
-            <div class="col-lg-3 col-sm-12">
+            <div class="col-lg-3 col-md-6 col-sm-12">
                 <h1 class="movie-title-lg">Roma</h1>
                 <h2 class="movie-director-lg">Alfonso Cuarón</h2>
             </div>
 
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <p class="movie-description">
                     In Alfonso Cuarón’s autobiographically inspired film, set in Mexico City in the early ’70s, we are placed within the physical and emotional terrain of a middle-class family whose center is quietly and unassumingly held by its beloved live-in nanny and housekeeper (Yalitza Aparicio). The cast is uniformly magnificent, but the real star of <span>ROMA</span> is the world itself, fully present and vibrantly alive, from sudden life-changing events to the slightest shifts in mood and atmosphere. Cuarón tells us an epic story of everyday life while also gently sweeping us into a vast cinematic experience, in which time and space breathe and majestically unfold. Shot in breathtaking black and white and featuring a sound design that represents something new in the medium, <span>ROMA</span> is a truly visionary work. A Netflix release.
                 </p>
             </div>
 
-            <div class="col-lg-3 col-sm-12 more-info">
+            <div class="col-lg-3 col-md-6 col-sm-12 more-info">
                 <span class="more-info-group">
                     <h6 class="more-info-heading">Cast</h6>
                     <p class="more-info-item">
@@ -188,14 +191,14 @@
         </div> <!-- Closing Movie Description Row -->
 
         <div class="row">
-            <div class="col-lg-6 offset-lg-3 col-sm-12 section-heading">
+            <div class="col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-12 section-heading">
                 <h1 class="section-title">Showtimes and Tickets</h1>
             </div>
         </div>
 
         <!-- Opening Showtimes Row -->
         <div class="row showtimes-row">
-            <div class="col-lg-6 offset-lg-3 col-sm-12">
+            <div class="col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-12">
                 <div class="row">
 
                     <div class="col-6 col-sm-6 day-group">
@@ -292,7 +295,7 @@
 
                 </div>
             </div>
-        </div>
+        </div> <!-- Closing Showtimes Row -->
 
     </div>
     <!-- Closing Container -->
@@ -364,7 +367,7 @@
 
             <div class="col-lg-5 col-md-6 col-sm-12 footer-col">
                 <h4 class="footer-heading">Subscribe to our newsletter</h4>
-                <p>Be the first to know about new releases, special seasons, upcoming events, and exclusive subscriber competitions.</p>
+                <p class="newsletter-desc">Be the first to know about new releases, special seasons, upcoming events, and exclusive subscriber competitions.</p>
                 <!-- Input Field -->
                 <form class="form-inline">
                     <input type="email" class="form-control" id="email" placeholder="Email Address">
@@ -402,6 +405,14 @@
                 $('#close-icon').hide();
                 //show menu icon
                 $('#menu-icon').show();
+            });
+            
+            //touch enabled carousel
+            $('#moviePageCarousel').swiperight(function() {
+                $(this).carousel('prev');
+            });
+            $('#moviePageCarousel').swipeleft(function() {
+                $(this).carousel('next');
             });
         });
 
