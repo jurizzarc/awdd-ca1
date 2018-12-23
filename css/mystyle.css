@@ -515,7 +515,7 @@ select {
 
 /* Movie Page */
 .movie-first-row {
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 50px;
 }
 
@@ -532,6 +532,40 @@ select {
     font-size: 22px;
     font-weight: 400;
     color: #000;
+}
+
+.movie-description {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000;
+    margin: 20px 0 0;
+}
+
+.movie-description span {
+    font-style: italic;
+}
+
+.more-info {
+    margin-top: 30px;
+}
+
+.more-info-heading {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 0.8px;
+    margin-bottom: 5px;
+}
+
+.more-info-item {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 25px;
 }
 
 /* Media Queries */
@@ -772,6 +806,18 @@ select {
 
     .festival-card-body {
         height: 255px;
+    }
+    
+    .movie-first-row {
+        margin-top: 70px;
+    }
+    
+    .movie-description {
+        padding-right: 30px;
+    }
+    
+    .movie-description, .more-info {
+        margin-top: 0px;
     }
 
     .footer {
